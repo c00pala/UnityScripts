@@ -29,3 +29,7 @@ Tips:
 - If the tiles fail to update, check the debug console for any error logs.
 
 - When a tile is updated, the new tile will have its 'Change Me' set to true, to clear all selected objects, click 'Clear Selected Tiles'.
+
+- WARNING: Does not support Undo. If you update something, you can't undo it.
+
+Also, currently doesn't support objects with children unless those children are a part of the prefab. If you've added children to an object in the scene only and not updated the prefab, these will be lost if you update the object!!
