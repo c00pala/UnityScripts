@@ -14,7 +14,7 @@ To use:
 
 - When your prefabs / tiles are in the scene, select them in the editor and in the inspector pane, you'll see the 'Change Me' bool. 
 
-- To 'select' a tile, simply set this to true. You can deselect this object safely.
+- To 'select' a tile, simply set this to true. You can deselect this object in the editor and select other objects and this will stay true.
 
 - With your desired objects 'selected', go back to the game manager object with the 'ChangeTile' script.
 
@@ -24,13 +24,13 @@ To use:
 
 - Click the 'Update Tiles' button.
 
+- The tile 'selection' will be kept, so you can change the tile int and update tiles again and it should still update the same times. To clear this selection, click 'Clear Selected Tiles' or go to the object itself and set the 'Change Me' bool back to false.
+
 ----------------------------------------------------------------------
 
 Tips:
 
 - If the tiles fail to update, check the debug console for any error logs.
-
-- When a tile is updated, the new tile will have its 'Change Me' set to true, to clear all selected objects, click 'Clear Selected Tiles'.
 
 - WARNING: Does not support Undo. If you update something, you can't undo it.
 
