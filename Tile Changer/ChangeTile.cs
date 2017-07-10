@@ -9,6 +9,7 @@ public class ChangeTile : MonoBehaviour {
 
     public GameObject[] tiles;
     public int tileToChangeInto;
+    public Vector3 newRotation;
 
     public void UpdateTiles()
     {
@@ -30,7 +31,9 @@ public class ChangeTile : MonoBehaviour {
             {
                 if (tileScript.changeMe == true)
                 {
-                    GameObject newTile = Instantiate(tiles[tileToChangeInto], tileScript.gameObject.transform.position, tileScript.gameObject.transform.rotation);
+                    GameObject newTile = (GameObject) PrefabUtility.InstantiatePrefab(tiles[tileToChangeInto]);
+                    newTile.transform.position = tileScript.gameObject.transform.position;
+                    newTile.transform.rotation = Quaternion.Euler(newRotation);
                     newTile.transform.SetParent(tileScript.gameObject.transform.parent);
                     newTile.GetComponent<TileChanger>().changeMe = true;
                     DestroyImmediate(tileScript.gameObject, false);
