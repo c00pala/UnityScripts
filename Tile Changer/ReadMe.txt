@@ -20,6 +20,8 @@ To use:
 
 - Choose the new prefab / tile you want to change to by setting the 'Tile To Change Into' int variable on the 'ChangeTile' script (e.g. 0 is element 0 from the tiles array, etc.).
 
+- If required, adjust the rotation using the 'New Rotation' variable.
+
 - Click the 'Update Tiles' button.
 
 ----------------------------------------------------------------------
@@ -33,3 +35,17 @@ Tips:
 - WARNING: Does not support Undo. If you update something, you can't undo it.
 
 Also, currently doesn't support objects with children unless those children are a part of the prefab. If you've added children to an object in the scene only and not updated the prefab, these will be lost if you update the object!!
+
+-----------------------------------------------------------------------
+
+CHANGE LOG:
+
+10/7/17 : 
+- Changed Instantiate into PrefabUtility in the main spawn function to ensure new GameObject retains connection to its prefab (else it won't be up to date with any changes made to the prefab itself).
+- Added ability to adjust rotation when replacing objects, adjust using the 'New Rotation' variable.
+
+8/7/17 : 
+- Cleaned up excess code in TileChanger script.
+
+8/7/17 : 
+- Created and uploaded to GitHub.
