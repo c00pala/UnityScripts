@@ -50,8 +50,6 @@ public class PlayerMove : MonoBehaviour {
 
     private void LateUpdate()
     {
-        // MOVEMENT - Hor and Ver axis:
-
         // Get mouse axis.
         mX += Input.GetAxis("Mouse X") * rotSpeedX * (Time.deltaTime * rotDamp);
         mY += -Input.GetAxis("Mouse Y") * rotSpeedY * (Time.deltaTime * rotDamp);
